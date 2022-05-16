@@ -1,0 +1,44 @@
+implements TranslatableContract
+
+    const Author        = "Author";
+    const Translator    = "Translator";
+    const Investigator  = "Investigator";
+    const Publisher     = "Publisher";
+
+    use Translatable;
+
+    public $translatedAttributes = ['name'];
+    protected  $fillable = ['name' ];
+
+
+    public static function getEnumValues(){
+        $type = DB::select(DB::raw('SHOW COLUMNS FROM people WHERE Field = "type"'))[0]->Type;
+        preg_match('/^enum\((.*)\)$/', $type, $matches);
+        $values = array();
+        foreach(explode(',', $matches[1]) as $value){
+            $values[] = trim($value, "'");
+        }
+        return $values;
+    }
+
+
+        public $timestamps = false;
+        protected $fillable = ['name'];
+
+
+               Schema::create('people', function (Blueprint $table) {
+                    $table->bigIncrements('id');
+                    $table->enum('type' , ['Author' , 'Translator' , 'Investigator' , 'Publisher']);
+                    $table->timestamps();
+                });
+
+                Schema::create('person_translations', function (Blueprint $table) {
+                    $table->bigIncrements('id');
+                    $table->bigInteger('person_id')->unsigned();
+
+                    $table->string('locale')->index();
+                    $table->string('name');
+
+                    $table->unique(['person_id', 'locale']);
+                    $table->foreign('person_id')->references('id')->on('persons')->onDelete('cascade');
+                });

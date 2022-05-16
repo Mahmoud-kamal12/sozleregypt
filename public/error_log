@@ -1,0 +1,27 @@
+[10-May-2022 02:52:46 Europe/Istanbul] PHP Notice:  require(): read of 1011 bytes failed with errno=12 Cannot allocate memory in /home/u6260270/public_html/sozler/vendor/composer/autoload_real.php on line 78
+[10-May-2022 02:52:47 Europe/Istanbul] PHP Fatal error:  require(): Failed opening required '/home/u6260270/public_html/sozler/vendor/composer/../symfony/polyfill-php73/bootstrap.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u6260270/public_html/sozler/vendor/composer/autoload_real.php on line 78
+[09-May-2022 23:52:47 UTC] PHP Fatal error:  During class fetch: Uncaught ErrorException: include(): read of 2142 bytes failed with errno=12 Cannot allocate memory in /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php:571
+Stack trace:
+#0 /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php(571): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'include(): read...', '/home/u6260270/...', 571, Array)
+#1 /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php(571): include()
+#2 /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home/u6260270/...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('Astrotomic\\Tran...')
+#4 /home/u6260270/public_html/sozler/vendor/astrotomic/laravel-translatable/src/Translatable/Translatable.php(22): spl_autoload_call('Astrotomic\\Tran...')
+#5 /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php(571): include('/home/u6260270/...')
+#6 /home/u6260270/public_html/sozler/vendor/composer/ClassLoad in /home/u6260270/public_html/sozler/vendor/astrotomic/laravel-translatable/src/Translatable/Translatable.php on line 22
+[10-May-2022 02:52:47 Europe/Istanbul] PHP Notice:  include(): read of 1393 bytes failed with errno=12 Cannot allocate memory in /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php on line 571
+[10-May-2022 02:52:47 Europe/Istanbul] PHP Warning:  include(): Failed opening '/home/u6260270/public_html/sozler/vendor/composer/../symfony/finder/Iterator/FileTypeFilterIterator.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/u6260270/public_html/sozler/vendor/composer/ClassLoader.php on line 571
+[09-May-2022 23:52:47 UTC] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Container/Container.php:809
+Stack trace:
+#0 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Container/Container.php(809): ReflectionClass->__construct('view')
+#1 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Container/Container.php(691): Illuminate\Container\Container->build('view')
+#2 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(796): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Container/Container.php(637): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(781): Illuminate\Container\Container->make('view', Array)
+#5 /home/u6260270/public_html/sozler/vendor/laravel/fra in /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 811
+[10-May-2022 02:52:47 Europe/Istanbul] PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:258
+Stack trace:
+#0 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(426): Illuminate\Support\Facades\Facade::__callStatic('replaceNamespac...', Array)
+#1 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\Foundation\Exceptions\Handler->registerErrorViewPaths()
+#2 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(314): Illuminate\Foundation\Exceptions\Handler->renderHttpException(Object(Symfony\Component\HttpKernel\Exception\HttpException))
+#3 /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(211): Illuminate\Foundation\Exceptions\Handler->prepareResponse(Object(Illuminate\Http\Request), Object(Symfony\Co in /home/u6260270/public_html/sozler/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 258
